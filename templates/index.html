@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surveillance System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <h1 class="main-heading">AI Surveillance System</h1>
+    <ul>
+        <form action="/video_feed" method="post" enctype="multipart/form-data">
+            <label for="video">Upload Video:</label>
+            <input type="file" id="video" name="video" accept="video/*" required>
+            <button type="submit">Submit</button>
+        </form>
+        <a href="/live_feed" target="_blank" class="live-detection">View Live Detection</a>
+    </ul>
+</body>
+</html>
